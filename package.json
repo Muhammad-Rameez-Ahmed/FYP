@@ -1,9 +1,9 @@
 {
-  "name": "material-kit-react",
+  "name": "admin-panel",
   "version": "3.0.0",
-  "author": "Devias",
+  "author": "Rameez",
   "licence": "MIT",
-  "homepage": "https://devias.io",
+
   "private": false,
   "scripts": {
     "dev": "next",
@@ -26,7 +26,7 @@
     "apexcharts": "3.37.0",
     "date-fns": "2.29.3",
     "formik": "2.2.9",
-    "next": "13.1.6",
+    "next": "^13.1.6",
     "nprogress": "0.2.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",

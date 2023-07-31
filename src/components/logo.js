@@ -1,10 +1,23 @@
 import { useTheme } from '@mui/material/styles';
 
+import {
+  Avatar,
+} from '@mui/material';
+
 export const Logo = () => {
   const theme = useTheme();
   const fillColor = theme.palette.primary.main;
 
   return (
+  //   <Avatar
+  //   sx={{
+  //     height: 80,
+  //     width: 80,
+
+  //   }}
+  //   src="/assets/avatars/white-shirt.jpeg"
+  // />
+
     <svg
       fill="none"
       height="100%"

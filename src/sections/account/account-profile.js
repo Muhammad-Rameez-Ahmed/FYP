@@ -10,12 +10,10 @@ import {
 } from '@mui/material';
 
 const user = {
-  avatar: '/assets/avatars/avatar-anika-visser.png',
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Anika Visser',
-  timezone: 'GTM-7'
+  avatar:"/assets/avatars/accounsts.png",
+  projectName: 'Automate T-Shirt Sizing',
+  name: 'Make Your Account',
+  zone: 'Admin Panel'
 };
 
 export const AccountProfile = () => (
@@ -31,9 +29,9 @@ export const AccountProfile = () => (
         <Avatar
           src={user.avatar}
           sx={{
-            height: 80,
-            mb: 2,
-            width: 80
+            height: 100,
+            mb:2,
+            width: 100
           }}
         />
         <Typography
@@ -46,24 +44,17 @@ export const AccountProfile = () => (
           color="text.secondary"
           variant="body2"
         >
-          {user.city} {user.country}
+          {user.projectName}
         </Typography>
         <Typography
           color="text.secondary"
           variant="body2"
         >
-          {user.timezone}
+          {user.zone}
         </Typography>
       </Box>
     </CardContent>
     <Divider />
-    <CardActions>
-      <Button
-        fullWidth
-        variant="text"
-      >
-        Upload picture
-      </Button>
-    </CardActions>
+  
   </Card>
 );

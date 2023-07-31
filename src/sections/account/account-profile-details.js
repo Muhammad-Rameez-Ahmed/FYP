@@ -11,33 +11,25 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 
-const states = [
+const role = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'mobile user',
+    label: 'Mobile User'
   },
   {
-    value: 'new-york',
-    label: 'New York'
-  },
-  {
-    value: 'san-francisco',
-    label: 'San Francisco'
-  },
-  {
-    value: 'los-angeles',
-    label: 'Los Angeles'
+    value: 'desktop user',
+    label: 'Desktop User'
   }
+
 ];
 
 export const AccountProfileDetails = () => {
   const [values, setValues] = useState({
-    firstName: 'Anika',
-    lastName: 'Visser',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'los-angeles',
-    country: 'USA'
+    name: 'Ahmed',
+    city: 'Karachi',
+    email: 'ahmed23@gmail.com',
+    phone: '23589712589',
+    password: 'ahmed2314'
   });
 
   const handleChange = useCallback(
@@ -65,7 +57,7 @@ export const AccountProfileDetails = () => {
     >
       <Card>
         <CardHeader
-          subheader="The information can be edited"
+          subheader="Enter your Details"
           title="Profile"
         />
         <CardContent sx={{ pt: 0 }}>
@@ -80,12 +72,12 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  helperText="Please specify the first name"
-                  label="First name"
-                  name="firstName"
+                  helperText="Please specify the Name"
+                  label="Name"
+                  name="Name"
                   onChange={handleChange}
                   required
-                  value={values.firstName}
+                  value={values.name}
                 />
               </Grid>
               <Grid
@@ -94,11 +86,11 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  label="Last name"
-                  name="lastName"
+                  label="City"
+                  name="city"
                   onChange={handleChange}
                   required
-                  value={values.lastName}
+                  value={values.city}
                 />
               </Grid>
               <Grid
@@ -133,11 +125,11 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  label="Country"
-                  name="country"
+                  label="Password"
+                  name="password"
                   onChange={handleChange}
                   required
-                  value={values.country}
+                  value={values.password}
                 />
               </Grid>
               <Grid
@@ -146,15 +138,15 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  label="Select State"
-                  name="state"
+                  label="Select Role"
+                  name="Role"
                   onChange={handleChange}
                   required
                   select
                   SelectProps={{ native: true }}
-                  value={values.state}
+                  value={values.role}
                 >
-                  {states.map((option) => (
+                  {role.map((option) => (
                     <option
                       key={option.value}
                       value={option.value}
@@ -170,7 +162,7 @@ export const AccountProfileDetails = () => {
         <Divider />
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
-            Save details
+            Create User
           </Button>
         </CardActions>
       </Card>
